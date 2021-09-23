@@ -30,7 +30,7 @@ export default class Login extends Component {
           />
           <TextInput
             style={{flex: 1}} 
-            placeholder="Enter Your Username"
+            placeholder="Email"
             returnKeyType='next'
             autoCorrect={false}
           />
@@ -42,7 +42,7 @@ export default class Login extends Component {
           />
           <TextInput
             style={{flex: 1}} 
-            placeholder="Enter Your Password"
+            placeholder="Password"
             returnKeyType='done'
             autoCorrect={false}
             secureTextEntry={true}
@@ -56,7 +56,7 @@ export default class Login extends Component {
         style={styles.iconVanTay}></Image>
 
         <Text style={styles.baseText}>Chua co tai khoan?
-            <Text style={styles.innerText}>   Dang Ky</Text> 
+            <Text style={styles.innerText} onPress={() => navigator.navigator('SignUp')}>   Dang Ky</Text> 
 
         </Text>
       </SafeAreaView>
