@@ -13,12 +13,16 @@ import {
   TouchableWithoutFeedbackBase,
   View,
   Image,
-  Button,
   TouchableOpacity
 } from 'react-native';
+import Button from 'react-native-button';
+
+import { SignUpScreen } from './ScreenNames';
 export default class Login extends Component {
   render() {
+    const {navigation} = this.props;
     return (
+      
       <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" />
         <Text style={styles.title}>Dang Nhap</Text>
@@ -54,9 +58,12 @@ export default class Login extends Component {
 
         <Image source={require('../Images/vantay_icon.png')} 
         style={styles.iconVanTay}></Image>
-
+ 
         <Text style={styles.baseText}>Chua co tai khoan?
-            <Text style={styles.innerText} onPress={() => navigator.navigator('SignUp')}>   Dang Ky</Text> 
+            <Button style={styles.innerText} 
+            onPress={() => {
+              navigation.navigate(SignUpScreen);
+            }}>   Dang Ky</Button> 
 
         </Text>
       </SafeAreaView>
